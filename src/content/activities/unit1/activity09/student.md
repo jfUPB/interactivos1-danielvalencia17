@@ -1,6 +1,6 @@
 #### Solucion a la actividad
 
-``` ej
+``` js
 let t = 0; 
 
 function setup() {
@@ -20,9 +20,9 @@ function draw() {
       let offsetY = cos((y + t) * 0.05) * 20; 
 
 
-      let r = map(sin((x + t) * 0.01), -1, 1, 100, 200); // Limitar el rojo (suave)
-      let g = map(cos((y + t) * 0.01), -1, 1, 0, 50);    // Mantener el verde bajo
-      let b = map(sin((x + y) * 0.01), -1, 1, 150, 255); // Aumentar el azul
+      let r = map(sin((x + t) * 0.01), -1, 1, 100, 200); 
+      let g = map(cos((y + t) * 0.01), -1, 1, 0, 50);    
+      let b = map(sin((x + y) * 0.01), -1, 1, 150, 255); 
 
       
       fill(r, g, b, 100); 
@@ -39,3 +39,8 @@ function mousePressed() {
   redraw(); 
 }
 ```
+![image](https://github.com/user-attachments/assets/a064a412-167e-4542-b476-be6b530e8592)
+
+##### Explicacion
+Este codigo genera una serie de cirulos en posiciones aletorias tanto en X como en Y cada que presionamos click, funciona como el sistema de color RGB (0 a 255) asi que el fondo esta configurado en un fondo oscuro y las figuras tienen valores mas altos en los canales Rojo y azul para generar esos difuminados en colores frios, las fguras se generar a partir de un elipse y tienen la variable fill baja para que se noten algo trasparentes.
+
