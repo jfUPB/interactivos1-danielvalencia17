@@ -5,6 +5,7 @@ Autoevalucion de las actividades en la fase APPLY
 esta actividad tenia como principal aplicacion investigar un ejemplo de diseño generativo, me abrio el horizonte en lo que podria llegar a lograr aplicando diseño generativo de una manera no convencional, quizas me falto mas reserch acerca de como funciona esta IA y como fue la aplicacion con el codigo del juego, Debo mejorar mis investigaciones, suelen ser muy superficiales.
 
 ##### Actividad 08
+en esta actividad tenia como principal aplicacion el pensar en como conectar los conocimientos que estamos adquiriendo con las cosas a tomar en cuenta en un proyecto, deberia haber explorado mas tipos de entrada y salida de los que conozco, debo mejorar mi capacidad de buscar informacion
 
 ##### Actividad 09
 este fue el primer contacto que tuve con esta pagina y con el nuevo lenguaje de progamacion, me sirvio para entender como servia esta nueva herramienta y empezar a entender los parametros que se manejan en este tipo de diseño por codigo, podria haber intentado aplicar la tranciones que queria pero no lo logre y decidi entregar lo que habia logrado, con lo del punto anterior quizas no dejarme llevar por la mediocridad.
