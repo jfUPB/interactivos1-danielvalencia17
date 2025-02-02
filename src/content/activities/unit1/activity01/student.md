@@ -1,6 +1,6 @@
 #### Solucion a la actividad
 
-### utilizare los siguientes ejemplos:
+##### utilizare los siguientes ejemplos:
 Noches expandidas del MAMM (Cine expandido)
 Half-Life alyx (videojuego en realidad aumentada)
 Show de luces epm, alumbrados (experiencia Visual)
