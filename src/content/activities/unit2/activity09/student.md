@@ -1,14 +1,18 @@
+#### Solucion a la actividad
+
+El semaforo funciona con maquinas de estados que activa cada color en el intervalo, funciona principlamente por esta funcion "if utime.ticks_diff(utime.ticks_ms(), self.startTime) > self.interval:", ,con un intervalo de tiempo de 2 segundos entre estados, cada color cambia la posicion en la que enciende el led.
+
+##### Codigo en Micro.bit
+```js
 from microbit import *
 import utime
 
 class TrafficLight:
     def __init__(self, interval):
-        self.state = "Red"           # Estado inicial del semáforo (rojo)
-        self.startTime = 0           # Marca el tiempo en que el estado cambió
-        self.interval = interval     # Intervalo de tiempo para cambiar de estado
-
+        self.state = "Red"           
+        self.startTime = 0          
+        self.interval = interval    
     def update(self):
-        # Controla la lógica de cambio de estado del semáforo
         if self.state == "Red":
             self.display_red()
         elif self.state == "Yellow":
@@ -18,34 +22,30 @@ class TrafficLight:
 
     def display_red(self):
         if utime.ticks_diff(utime.ticks_ms(), self.startTime) > self.interval:
-            # Enciende el píxel rojo (en la posición (0,0))
-            display.set_pixel(0, 0, 9)  # Rojo
-            display.set_pixel(0, 1, 0)  # Apaga el amarillo
-            display.set_pixel(0, 2, 0)  # Apaga el verde
+            display.set_pixel(0, 0, 9) 
+            display.set_pixel(0, 1, 0)  
+            display.set_pixel(0, 2, 0) 
             self.state = "Yellow"
-            self.startTime = utime.ticks_ms()  # Reinicia el temporizador
-
+            self.startTime = utime.ticks_ms() 
     def display_yellow(self):
         if utime.ticks_diff(utime.ticks_ms(), self.startTime) > self.interval:
-            # Enciende el píxel amarillo (en la posición (0,1))
-            display.set_pixel(0, 0, 0)  # Apaga el rojo
-            display.set_pixel(0, 1, 9)  # Amarillo
-            display.set_pixel(0, 2, 0)  # Apaga el verde
+            display.set_pixel(0, 0, 0)  
+            display.set_pixel(0, 1, 9)  
+            display.set_pixel(0, 2, 0)  
             self.state = "Green"
             self.startTime = utime.ticks_ms()
 
     def display_green(self):
         if utime.ticks_diff(utime.ticks_ms(), self.startTime) > self.interval:
-            # Enciende el píxel verde (en la posición (0,2))
-            display.set_pixel(0, 0, 0)  # Apaga el rojo
-            display.set_pixel(0, 1, 0)  # Apaga el amarillo
-            display.set_pixel(0, 2, 9)  # Verde
+            display.set_pixel(0, 0, 0) 
+            display.set_pixel(0, 1, 0) 
+            display.set_pixel(0, 2, 9)  
             self.state = "Red"
             self.startTime = utime.ticks_ms()
 
-# Crea un semáforo con intervalo de 2000 ms (2 segundos) por estado
 traffic_light = TrafficLight(2000)
 
 while True:
-    traffic_light.update()  # Actualiza el estado del semáforo
-    sleep(10)  # Pausa para optimizar el rendimiento
+    traffic_light.update() 
+    sleep(10)  
+```
