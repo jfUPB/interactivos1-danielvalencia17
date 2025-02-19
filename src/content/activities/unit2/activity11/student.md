@@ -19,3 +19,5 @@ cada segundo, disminuye el contador usando utime.ticks_ms(),
 Activa el speaker con un sonido y muestra una calavera en el display led.
 ###### Eventos y transiciones:
 Si se toca el botón Touch → Transición a configuracion con reinicio del contador a 20 s.
+
+![Untitled diagram-2025-02-19-134818](https://github.com/user-attachments/assets/0f04166a-3bba-4f36-bc02-aa20a420fff4)
