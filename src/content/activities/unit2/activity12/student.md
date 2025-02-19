@@ -1,7 +1,9 @@
 #### Solucion a la actividad
 
+##### funcionamiento
+https://www.flexclip.com/es/share/8333841dde3024f2fcea3ebfdc7667d1e863422.html
 
-
+##### Codigo para micro.bit
 ```js
 from microbit import *
 import utime
