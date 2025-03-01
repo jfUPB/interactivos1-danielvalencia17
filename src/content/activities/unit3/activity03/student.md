@@ -1,6 +1,6 @@
 #### Solucion de la actividad
 
-
+Cree una variable en parte de arriba que se llama evento que esta vacia, lo que esta hace es que cuando esta en un estado de los 3 posibles, ella busca digamos retroalimentacion ya sea de los sensores del microbit o del puerto serial que son los if que hay en la parte inferior, donde se le asigna a cada letra una funcion del microbit, asi que la funcion evento al recibir esta "letra" por el pueto serial define la accion como un movimiento o toque en el microbit.
 
 ```js
 from microbit import *
