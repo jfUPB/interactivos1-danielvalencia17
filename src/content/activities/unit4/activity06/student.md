@@ -12,9 +12,12 @@ El (\n) o enter es la manera en que el progama detecta el final del envio de ese
 
 ##### ¿Por qué fue necesario usar una máquina de estados en la aplicación modificada de p5.js?
 
+
+
 ##### ¿Cómo se formatean los datos en el micro:bit para ser enviados por el puerto serial?
 
 ##### ¿Qué significa que los datos enviados por el micro:bit están codificados en ASCII?
+Es utilizado como un lenguaje universal de envio de datos, lo cual hace mas facil para ciertos modelos recibir esa informacion encriptada.
 
 ##### ¿Por qué es necesario en la aplicación de p5.js preguntar si hay bytes disponibles en el puerto serial antes de leerlos?
 Ya que eesta se almacena con un entorno del propio P5js asi que los datos puede que siempre esten ahi pero hay que preguntar si realmente estan (el ejemplo de portero del edificio)
@@ -22,10 +25,18 @@ Ya que eesta se almacena con un entorno del propio P5js asi que los datos puede 
 if (port.availableBytes() > 0)
 ```
 ##### ¿Cómo se elimina el retorno de carro o salto de línea de un string en p5.js?
-
+con la variable replace esta lee los saltos de linea y los elimina (\n)
+```js
+data = data.trim();
+```
 ##### Si una cadena tiene información separada por espacios y quieres dividir dicha información en varias cadenas individuales ¿Qué función de p5.js usarías?
+split(str, ' ')esta divide la cadena str en partes usando el espacio (' ') como delimitador.
+```js
+let values = data.split(",");
+```
 
 ##### Por qué es necesario en la aplicación del caso de estudio convertir las cadenas a números enteros antes de usarlas en el sketch de p5.js?
+Porque las cadenas de datos y los numeros son difrentes tipos de datos, si no se convierte no podemos crear variables matematicas o utlizarlas como datos para nuetro progama
 
 ##### Si el micro:bit tiene los siguientes datos xValue: 123, yValue: 756, aState: False, bState: True ¿Qué bytes se enviarían por el puerto serial?
 si es mirandolo desde el puerto serial seria 
