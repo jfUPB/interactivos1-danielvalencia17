@@ -38,6 +38,9 @@ el lee cual es la zona
         }
 ```
 ##### ¿Cómo se generan los eventos A pressed y B released que se generan en p5.js a partir de los datos que envía el micro:bit?
-
+los datos que envia el microbit por el serial, el progama lee los datos y cuando siente que A o B estan en true envia el mensaje por el monitor serial, en el caso del B es cuando se desconecta.
 ##### Capturas de pantalla de los algunos dibujos que hayas hecho con el sketch.
+![image](https://github.com/user-attachments/assets/3adbbf65-4965-490c-ab55-eab11e395655)
+![image](https://github.com/user-attachments/assets/7d50d0f5-8bc7-4837-b431-9ec23e208438)
+
 
