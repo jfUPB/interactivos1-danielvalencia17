@@ -10,8 +10,7 @@
 
 ##### ¿Qué es el checksum y para qué sirve?
 
-##### En la función readSerialData() del programa en p5.js:
-¿Qué hace la función concat? ¿Por qué?
+##### ¿Qué hace la función concat? ¿Por qué?
  ```js
 function readSerialData() {
     let available = port.availableBytes();
