@@ -3,13 +3,14 @@
 ##### En la unidad anterior abordaste la construcción de un protocolo ASCII. En esta unidad realizaste lo propio con un protocolo binario. Realiza una tabla donde compares, según la aplicación que modificaste en la fase de aplicación de ambas unidades, los siguientes aspectos: eficiencia, velocidad, facilidad, usos de recursos. Justifica con ejemplos concretos tomados de las aplicaciones modificadas.
 
 ##### ¿Por qué fue necesario introducir framing en el protocolo binario?
+que que en el protocolo binario se emvian muchos mas datos que en el acscii lo cual colapsa el canal
 
 ##### ¿Cómo funciona el framing?
-
+el framing suma los datos en numeros y los coloca en paquetes que es lo que envia al progama
 ##### ¿Qué es un carácter de sincronización?
 
 ##### ¿Qué es el checksum y para qué sirve?
-
+Esto convierte los datos en enteros y los coloca en un numero del 0 al 255 esto sirve despues para verificar que los paquetes lleguen de manera correcta
 ##### ¿Qué hace la función concat? ¿Por qué?
  ```js
 function readSerialData() {
