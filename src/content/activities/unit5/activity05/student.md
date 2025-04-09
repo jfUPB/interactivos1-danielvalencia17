@@ -11,6 +11,7 @@ el framing suma los datos en numeros y los coloca en paquetes que es lo que envi
 
 ##### ¿Qué es el checksum y para qué sirve?
 Esto convierte los datos en enteros y los coloca en un numero del 0 al 255 esto sirve despues para verificar que los paquetes lleguen de manera correcta
+
 ##### ¿Qué hace la función concat? ¿Por qué?
  ```js
 function readSerialData() {
@@ -20,6 +21,8 @@ function readSerialData() {
         serialBuffer = serialBuffer.concat(newData);
     }
 ```
+une dos arreglos, esta va cortando los bytes hasta que tiene los 8 que necesita
+
 ##### En la función readSerialData() tenemos un bucle que recorre el buffer solo si este tiene 8 o más bytes ¿Por qué?
  ```js
   while (serialBuffer.length >= 8) {
@@ -28,26 +31,33 @@ function readSerialData() {
       continue;
     }
 ```
+Para asegurarse de que los paquetes de datos lleguen completos, es el /n pero de binario.
+
 ##### En el código anterior qué significa 0xaa?
+Es un numero hexadecimal, lo que hace ahi es la conversion del numero binario a enteros.
 
 ##### En el código anterior qué hace la función shift y la instrucción continue? ¿Por qué?
+Se usa para desechar bytes, es decir los paquetes de datos que esten incompletos los deja de utilizar hasta que llegue el paquete correcto 0xaa y continue funciona para pasar a la siguiente iteraccion si el paquete esta correcto
 
 ##### Si hay menos de 8 bytes qué hace la instrucción break? ¿Por qué?
 
    ```js
  if (serialBuffer.length < 8) break;
 ```
+Esto hace que se salga del while esperando por mas datos.
 
 ##### ¿Cuál es la diferencia entre slice y splice? ¿Por qué se usa splice justo después de slice?
 ```js
 let packet = serialBuffer.slice(0, 8);
 serialBuffer.splice(0, 8);
 ```
+Slice corta los bytes y splice los reune desechando la parte que no funciono, por eso uno va despues del otro
 
 ##### A la siguiente parte del código se le conoce como programación funcional ¿Cómo opera la función reduce?
  ```js
     let computedChecksum = dataBytes.reduce((acc, val) => acc + val, 0) % 256;
 ```
+Convierte el arreglo en un solo numero, en este caso uno entre 0 y 255 
 
 ##### ¿Por qué se compara el checksum enviado con el calculado? ¿Para qué sirve esto?
 
@@ -57,13 +67,18 @@ if (computedChecksum !== receivedChecksum) {
     continue;
 }
 ```
+Para asegurarse de que el paquete este completo, y no tenga errores, es como una especie de verificacion.
+
 ##### En el código anterior qué hace la instrucción continue? ¿Por qué?
+por si algun paquete vino corrupto continuar con el siguiente y no quedarse pensando.
 
 ##### ¿Qué es un DataView? ¿Para qué se usa?
  ```js
 let buffer = new Uint8Array(dataBytes).buffer;
 let view = new DataView(buffer);
 ```
+se utiliza para poder generar la visualizacion de los datos que nos este llegando de un dispositvio o señal.
+
 ##### ¿Por qué es necesario hacer estas conversiones y no simplemente se toman tal cual los datos del buffer?
  ```js
     microBitX = view.getInt16(0) + windowWidth / 2;
@@ -71,3 +86,4 @@ let view = new DataView(buffer);
     microBitAState = view.getUint8(4) === 1;
     microBitBState = view.getUint8(5) === 1;
 ```
+Porque los datos que llegan, por decirlo asi, estan en otro idioma, por si solos realmente no significan nada toca generar la conversion para que tengan sentido en un contexto del progama que estamos utilizando.
