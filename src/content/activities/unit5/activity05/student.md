@@ -1,5 +1,8 @@
 #### Solucion de la actividad
 
+![image](https://github.com/user-attachments/assets/6b630ccf-376e-4046-b136-97d24591bb54)
+
+
 ##### En la unidad anterior abordaste la construcción de un protocolo ASCII. En esta unidad realizaste lo propio con un protocolo binario. Realiza una tabla donde compares, según la aplicación que modificaste en la fase de aplicación de ambas unidades, los siguientes aspectos: eficiencia, velocidad, facilidad, usos de recursos. Justifica con ejemplos concretos tomados de las aplicaciones modificadas.
 
 ##### ¿Por qué fue necesario introducir framing en el protocolo binario?
