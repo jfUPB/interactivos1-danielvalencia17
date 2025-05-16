@@ -1,0 +1,3 @@
+#### Solucion de la actividad
+
+Al principio lo primero que hice en la clase fue preguntar cual era el punto de la materia, que nos querian enseñar, principalmente para hacer una vision de lo que podria generar con este nuevo aprendizaje, viendo la materialidad del curso me doy cuenta que tiene mucho que ver con lo que quiero lograr como diseñador interactivo y en la creacion de experiencias, el diseño generativo era un campo que nunca habia explorado y creo que me puede abrir las puertas en varios proyectos por su capacidad de generar experiencias nuevas a largo plazo con la progamacion de algoritmos, ademas, viendo las aplicaciones con el microbit veo cosas interesantes que puedo explorar en touchdesigner.
